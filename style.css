@@ -1,11 +1,14 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Quicksand", sans-serif;
+    font-family: "Dosis", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300;
     font-style: normal;
     box-sizing: border-box;
+}
+
+.main {
+    overflow-x: hidden;
 }
 
 #header {
@@ -28,6 +31,8 @@
     /* Replace with your background image path */
     z-index: -1;
     /* Place the overlay behind the content */
+    background-attachment: fixed;
+
 }
 
 #header img {
@@ -40,9 +45,11 @@
     color: rgb(172, 172, 172);
     font-size: 1.5rem;
     font-weight: 500;
+
 }
-.navbar-legendary{
-    position: fixed;
+
+.navbar-legendary {
+    /* position: fixed; */
     top: 0;
     z-index: 10;
     width: 100vw;
@@ -50,40 +57,113 @@
     -webkit-box-shadow: 0 4px 6px -6px #636161;
     -moz-box-shadow: 0 4px 6px -6px #b4b0b0;
     box-shadow: 0 4px 6px -6px #222;
-    padding:1rem;
+    padding: 1rem;
     color: white;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
-.navbar .navbar-brand{
+
+.navbar .navbar-brand {
     font-size: 2rem;
     color: black;
     font-weight: 800;
     margin-left: 5rem;
 }
-.navbar .navbar-nav{
+
+.navbar .navbar-nav {
     font-size: 15px;
 }
-.navbar .navbar-nav li a{
+
+.navbar .navbar-nav li a {
     color: black;
     font-weight: 400;
 }
-#about{
+
+#about {
     width: 100vw;
-    height: 100vh;
-    padding-top: 6rem;
+    height: auto;
+    /* padding-top: 6rem; */
+    position: relative;
+    overflow: hidden;
+    color: white;
 }
-.section-heading{
+
+#about::before {
+    content: "";
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(19, 8, 8, 0.5), rgba(41, 41, 41, 0.5)), url('./images/wallhaven-95qmk1.jpg') bottom/cover;
+    /* Replace with your background image path */
+    z-index: -1;
+    /* Place the overlay behind the content */
+    background-attachment: fixed;
+    filter: brightness(10%);
+
+
+}
+
+.section-heading {
     text-transform: uppercase;
     text-align: center;
+    margin-top: 5rem;
     margin-bottom: 5rem;
+    font-size: 3rem;
 }
-#about .row{
+
+#about .row {
     padding: 5rem;
 }
-#about .row h5{
+
+#about .row h5 {
     font-size: 2rem;
 }
 
+#services {
+    width: 100vw;
+    height: 100vh;
+    /* padding-top: 6rem; */
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+#services::before {
+    content: "";
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/wp9878268.jpg') center/cover;
+    /* Replace with your background image path */
+    z-index: -1;
+    /* Place the overlay behind the content */
+    background-attachment: fixed;
+    filter: brightness(30%);
+
+}
+
+#services .brand {
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+#services .brand a {
+    text-decoration: none;
+    color: #636161;
+}
+
+#services .brand a i {
+    font-size: 4rem;
+}
+
+#services .brand span {
+    font-size: 20px;
+    font-weight: 400;
+}
 
 
 
@@ -97,8 +177,17 @@
         font-size: 0.8rem;
         font-weight: 500;
     }
-    #about img{
+
+    #about img {
         width: 300px;
+    }
+
+    #services .brand a i {
+        font-size: 2rem;
+    }
+
+    #services .brand span {
+        font-size: 15px;
     }
 
 }
