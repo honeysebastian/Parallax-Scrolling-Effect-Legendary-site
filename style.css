@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+#header {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+
+#header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/bodypaint.jpg') bottom/cover;
+    /* Replace with your background image path */
+    z-index: -1;
+    /* Place the overlay behind the content */
+}
+
+#header img {
+    margin-top: 15rem;
+}
+
+#header p {
+    text-align: center;
+    margin: 20px 0;
+    color: rgb(172, 172, 172);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.navbar-legendary{
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100px;
+    -webkit-box-shadow: 0 4px 6px -6px #636161;
+    -moz-box-shadow: 0 4px 6px -6px #b4b0b0;
+    box-shadow: 0 4px 6px -6px #222;
+    padding:1rem;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.navbar .navbar-brand{
+    font-size: 2rem;
+    color: black;
+    font-weight: 800;
+    margin-left: 5rem;
+}
+.navbar .navbar-nav{
+    font-size: 15px;
+}
+.navbar .navbar-nav li a{
+    color: black;
+    font-weight: 400;
+}
+#about{
+    width: 100vw;
+    height: 100vh;
+    padding-top: 6rem;
+}
+.section-heading{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+#about .row{
+    padding: 5rem;
+}
+#about .row h5{
+    font-size: 2rem;
+}
+
+
+
+
+@media(max-width:600px) {
+    #header img {
+        margin-top: 15rem;
+        width: 390px;
+    }
+
+    #header p {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    #about img{
+        width: 300px;
+    }
+
+}
